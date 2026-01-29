@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+/* Custom Theme Colors for Arctic Technologies */
+:root {
+  /* Core colors */
+  --arctic-navy: #0a0f1c;
+  --arctic-navy-light: #111827;
+  --arctic-navy-lighter: #1a2234;
+  --arctic-cyan: #00d9ff;
+  --arctic-blue: #0066ff;
+  --arctic-purple: #8b5cf6;
+  
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Gradient */
+  --gradient-primary: linear-gradient(135deg, #00d9ff 0%, #0066ff 50%, #8b5cf6 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0, 217, 255, 0.3) 0%, rgba(0, 102, 255, 0.3) 100%);
+  
+  /* Background */
+  --background: #0a0f1c;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-arctic-navy: #0a0f1c;
+  --color-arctic-navy-light: #111827;
+  --color-arctic-navy-lighter: #1a2234;
+  --color-arctic-cyan: #00d9ff;
+  --color-arctic-blue: #0066ff;
+  --color-arctic-purple: #8b5cf6;
+  --font-sans: var(--font-inter);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter, system-ui, -apple-system, sans-serif);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(26, 34, 52, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3),
+              0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.3),
+              0 0 40px rgba(0, 102, 255, 0.1);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: var(--arctic-navy-light);
+  border-radius: 16px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.5), rgba(0, 102, 255, 0.5), rgba(139, 92, 246, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%);
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--arctic-cyan);
+  color: var(--arctic-cyan);
+  background: rgba(0, 217, 255, 0.1);
+}
+
+/* Card styles */
+.service-card {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(0, 217, 255, 0.1);
+}
+
+/* Animated background grid */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Radial gradient overlay */
+.bg-radial {
+  background: radial-gradient(ellipse at top, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--arctic-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--arctic-navy-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--arctic-cyan);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: white;
+}
