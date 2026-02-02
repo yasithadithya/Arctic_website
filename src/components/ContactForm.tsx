@@ -25,12 +25,25 @@ export default function ContactForm() {
         e.preventDefault();
         setStatus("loading");
 
-        // Simulate form submission
-        // In production, you would send this to your backend
-        setTimeout(() => {
-            setStatus("success");
-            setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-        }, 1500);
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            setStatus("error");
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
