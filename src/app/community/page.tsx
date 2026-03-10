@@ -125,11 +125,15 @@ export default function CommunityPage() {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {upcomingContent.map((item, i) => (
-                            <div key={i} className="glass-light rounded-xl p-6 text-center">
+                            <Link
+                                key={i}
+                                href="/coming-soon"
+                                className="glass-light rounded-xl p-6 text-center hover:border-arctic-cyan/30 border border-transparent transition-all hover:-translate-y-1 cursor-pointer group"
+                            >
                                 <span className="text-4xl mb-4 block">{item.icon}</span>
-                                <h3 className="text-white font-semibold mb-2">{item.type}</h3>
+                                <h3 className="text-white font-semibold mb-2 group-hover:text-arctic-cyan transition-colors">{item.type}</h3>
                                 <p className="text-gray-400 text-sm">{item.title}</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, Snowflake } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -23,12 +24,16 @@ export default function Header() {
                     <div className="flex items-center justify-between h-16 lg:h-20">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 group">
-                            <div className="relative">
-                                <Snowflake className="w-8 h-8 text-arctic-cyan transition-transform group-hover:rotate-45 duration-500" />
-                                <div className="absolute inset-0 w-8 h-8 bg-arctic-cyan/30 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
+                            <Image
+                                src="/Arctic_logo.png"
+                                alt="Arctic Technologies"
+                                width={160}
+                                height={40}
+                                className="h-10 w-auto"
+                                priority
+                            />
                             <span className="text-xl font-bold">
-                                <span className="text-white">Arctic</span>
+                                <span className="text-white">Arctic </span>
                                 <span className="gradient-text">Technologies</span>
                             </span>
                         </Link>

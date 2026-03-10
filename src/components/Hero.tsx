@@ -60,7 +60,7 @@ export default function Hero() {
                     <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-10">
                         At Arctic Technologies, we go beyond quick fixes — we deliver dependable,
                         long-term IT solutions tailored to your business. From computer repairs to
-                        identity management, with SLA-backed support.
+                        software solutions, with SLA-backed support.
                     </p>
 
                     {/* CTA Buttons */}

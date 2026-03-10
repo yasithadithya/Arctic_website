@@ -10,8 +10,8 @@ const contactInfo = [
     {
         icon: Phone,
         title: "Phone",
-        content: "+94 78 88 618 11",
-        href: "tel:+94788861811"
+        content: "+94 76 472 1478",
+        href: "tel:+94764721478"
     },
     {
         icon: Mail,

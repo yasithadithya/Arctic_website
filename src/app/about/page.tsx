@@ -31,7 +31,7 @@ const values = [
 
 const timeline = [
     {
-        year: "2025",
+        year: "2024",
         title: "Arctic Technologies Founded",
         description: "Started with a vision to provide reliable IT services in Sri Lanka"
     },
@@ -41,9 +41,9 @@ const timeline = [
         description: "Introduced Service Level Agreement backed support for businesses"
     },
     {
-        year: "2025",
+        year: "2026",
         title: "Expanding Services",
-        description: "Added Power Apps, Identity Management, and Web Design services"
+        description: "Added Power Apps, Software Solutions, and Web Design services"
     },
 ];
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
                                 productive and protected.
                             </p>
                             <p className="text-gray-400 leading-relaxed mb-8">
-                                From computer and mobile phone repairs to identity management, cloud solutions,
+                                From computer and mobile phone repairs to software solutions, cloud solutions,
                                 and proactive maintenance, we deliver reliable, scalable services tailored to
                                 your needs. Whether you&apos;re a startup or an established enterprise, we bring
                                 clarity, consistency, and care to every engagement.

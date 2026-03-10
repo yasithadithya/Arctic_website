@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
     title: "Our Services | Arctic Technologies",
-    description: "Explore Arctic Technologies' comprehensive IT services including computer repairs, mobile services, Power Apps, website design, and identity management.",
+    description: "Explore Arctic Technologies' comprehensive IT services including computer repairs, mobile services, Power Apps, website design, and software solutions.",
 };
 
 export default function ServicesPage() {

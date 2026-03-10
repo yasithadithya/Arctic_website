@@ -124,7 +124,7 @@ export default function ContactForm() {
                         <option value="mobile" className="bg-arctic-navy">Mobile Phone Repairs</option>
                         <option value="powerapps" className="bg-arctic-navy">Power App Solutions</option>
                         <option value="web" className="bg-arctic-navy">Website Design</option>
-                        <option value="identity" className="bg-arctic-navy">Identity Management</option>
+                        <option value="identity" className="bg-arctic-navy">Software Solutions</option>
                         <option value="other" className="bg-arctic-navy">Other Inquiry</option>
                     </select>
                 </div>

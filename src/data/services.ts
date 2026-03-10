@@ -86,14 +86,14 @@ export const services: Service[] = [
     {
         id: "identity",
         icon: ShieldCheck,
-        title: "Identity Management Solutions",
-        shortDescription: "Secure identity solutions with Microsoft Entra ID integration.",
-        fullDescription: "We deliver robust identity management solutions that empower organizations to control access, protect data, and streamline user experiences across cloud and on-prem environments. Leveraging tools like Microsoft Entra ID, we implement role-based access control, multi-factor authentication, and seamless integration with your existing systems. Our SLA-backed approach ensures every deployment is secure, scalable, and aligned with compliance standards — giving you full visibility and control over who accesses what, when, and how.",
+        title: "Software Solutions",
+        shortDescription: "Custom software solutions built to improve efficiency and growth.",
+        fullDescription: "We build practical software solutions that help organizations automate workflows, improve collaboration, and scale with confidence. From internal business tools to customer-facing platforms, our team designs and delivers systems that align with your goals, integrate with your existing environment, and stay easy to maintain. Our SLA-backed approach ensures every solution is reliable, secure, and continuously optimized for long-term business value.",
         features: [
-            "Microsoft Entra ID integration",
-            "Role-based access control",
-            "Multi-factor authentication",
-            "Compliance alignment"
+            "Custom software development",
+            "Workflow automation",
+            "System integration",
+            "SLA-backed support and optimization"
         ]
     }
 ];

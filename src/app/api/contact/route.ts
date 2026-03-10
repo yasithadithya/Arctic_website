@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
             mobile: "Mobile Phone Repairs",
             powerapps: "Power App Solutions",
             web: "Website Design",
-            identity: "Identity Management",
+            identity: "Software Solutions",
             other: "Other Inquiry",
         };
 

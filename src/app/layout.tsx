@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
-  description: "Arctic Technologies delivers dependable IT solutions including computer repairs, mobile phone services, Power App solutions, website design, and identity management with SLA-backed support in Sri Lanka.",
-  keywords: ["IT solutions", "computer repair", "mobile repair", "Power Apps", "website design", "identity management", "Sri Lanka", "SLA support"],
+  description: "Arctic Technologies delivers dependable IT solutions including computer repairs, mobile phone services, Power App solutions, website design, and software solutions with SLA-backed support in Sri Lanka.",
+  keywords: ["IT solutions", "computer repair", "mobile repair", "Power Apps", "website design", "software solutions", "Sri Lanka", "SLA support"],
   authors: [{ name: "Arctic Technologies" }],
   openGraph: {
     title: "Arctic Technologies | IT Solutions & SLA-Backed Support",

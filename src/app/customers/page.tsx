@@ -13,12 +13,12 @@ const testimonials = [
         role: "Small Business Owner",
         rating: 5
     },
-    {
-        quote: "The team at Arctic is professional, responsive, and truly understands the needs of modern businesses. Highly recommended!",
-        author: "Corporate Client",
-        role: "IT Manager",
-        rating: 5
-    },
+    // {
+    //     quote: "The team at Arctic is professional, responsive, and truly understands the needs of modern businesses. Highly recommended!",
+    //     author: "Corporate Client",
+    //     role: "IT Manager",
+    //     rating: 5
+    // },
     {
         quote: "From computer repairs to our new company website, Arctic Technologies has been our go-to partner for all things tech.",
         author: "Enterprise Client",

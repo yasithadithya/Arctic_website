@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Snowflake, Facebook, Linkedin, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Linkedin, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
     services: [
@@ -8,7 +9,7 @@ const footerLinks = {
         { label: "Mobile Repairs", href: "/services#mobile" },
         { label: "Power Apps", href: "/services#powerapps" },
         { label: "Website Design", href: "/services#web" },
-        { label: "Identity Management", href: "/services#identity" },
+        { label: "Software Solutions", href: "/services#identity" },
     ],
     company: [
         { label: "About Us", href: "/about" },
@@ -50,9 +51,15 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-1">
                         <Link href="/" className="inline-flex items-center gap-2 group mb-4">
-                            <Snowflake className="w-8 h-8 text-arctic-cyan transition-transform group-hover:rotate-45 duration-500" />
+                            <Image
+                                src="/Arctic_logo.png"
+                                alt="Arctic Technologies"
+                                width={160}
+                                height={40}
+                                className="h-10 w-auto"
+                            />
                             <span className="text-xl font-bold">
-                                <span className="text-white">Arctic</span>
+                                <span className="text-white">Arctic </span>
                                 <span className="gradient-text">Technologies</span>
                             </span>
                         </Link>
@@ -118,13 +125,13 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li>
                                 <a
-                                    href="tel:+94788861811"
+                                    href="tel:+94764721478"
                                     className="flex items-center gap-3 text-gray-400 text-sm hover:text-arctic-cyan transition-colors group"
                                 >
                                     <span className="w-8 h-8 rounded-lg bg-arctic-cyan/10 flex items-center justify-center group-hover:bg-arctic-cyan/20 transition-colors">
                                         <Phone className="w-4 h-4 text-arctic-cyan" />
                                     </span>
-                                    +94 78 88 618 11
+                                    +94 76 472 1478
                                 </a>
                             </li>
                             <li>
@@ -156,7 +163,7 @@ export default function Footer() {
                         © {new Date().getFullYear()} Arctic Technologies. All rights reserved.
                     </p>
                     <p className="text-gray-500 text-sm">
-                        Designed with <span className="text-arctic-cyan">❄</span> in Sri Lanka
+                        Designed with Arctic Technologies in Sri Lanka
                     </p>
                 </div>
             </div>
