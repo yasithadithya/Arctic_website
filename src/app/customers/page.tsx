@@ -1,9 +1,44 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, Star, Building2, Quote } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Our Customers | Arctic Technologies",
     description: "See how Arctic Technologies helps businesses with IT solutions, computer repairs, and digital transformation.",
+    keywords: [
+        "Arctic Technologies clients",
+        "IT customer testimonials",
+        "business IT success stories",
+        "technology partner Sri Lanka",
+    ],
+    alternates: {
+        canonical: "/customers",
+    },
+    openGraph: {
+        title: "Our Customers | Arctic Technologies",
+        description: "Read how businesses benefit from Arctic Technologies IT services and support.",
+        url: "https://arctictechnologies.org.lk/customers",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Arctic Technologies Customers",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Our Customers | Arctic Technologies",
+        description: "See real feedback from organizations supported by Arctic Technologies.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 const testimonials = [

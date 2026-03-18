@@ -1,9 +1,45 @@
 import Link from "next/link";
-import { ArrowRight, Facebook, Linkedin, MessageCircle, Rss, Mail } from "lucide-react";
+import type { Metadata } from "next";
+import { ArrowRight, Facebook, Linkedin, MessageCircle, Mail } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Community | Arctic Technologies",
-    description: "Join the Arctic Technologies community. Stay updated with tech tips, news, and behind-the-scenes content.",
+    description: "Join the Arctic Technologies community for IT tips, updates, tutorials, and behind-the-scenes content from our team.",
+    keywords: [
+        "Arctic Technologies community",
+        "IT community Sri Lanka",
+        "tech tips",
+        "IT tutorials",
+        "technology updates",
+    ],
+    alternates: {
+        canonical: "/community",
+    },
+    openGraph: {
+        title: "Community | Arctic Technologies",
+        description: "Follow Arctic Technologies for practical IT tips, tutorials, and company updates.",
+        url: "https://arctictechnologies.org.lk/community",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Arctic Technologies Community",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Community | Arctic Technologies",
+        description: "Join our community for IT tips, tutorials, and updates from Arctic Technologies.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 const socialPlatforms = [
@@ -57,8 +93,36 @@ const upcomingContent = [
 ];
 
 export default function CommunityPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Community | Arctic Technologies",
+        description: "Join the Arctic Technologies community for IT tips, updates, and tutorials.",
+        url: "https://arctictechnologies.org.lk/community",
+        isPartOf: {
+            "@type": "WebSite",
+            name: "Arctic Technologies",
+            url: "https://arctictechnologies.org.lk",
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Arctic Technologies",
+            url: "https://arctictechnologies.org.lk",
+            sameAs: [
+                "https://web.facebook.com/profile.php?id=61575511880304",
+                "https://www.linkedin.com/company/arctic-technologies-by-lucifer/",
+                "https://whatsapp.com/channel/0029VaqrpXCBlHphT762Pz3i",
+            ],
+        },
+    };
+
     return (
         <div className="pt-24 lg:pt-32">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* Hero Section */}
             <section className="py-16 lg:py-24 relative">
                 <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-arctic-cyan/10 rounded-full blur-3xl pointer-events-none" />

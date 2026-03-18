@@ -1,8 +1,52 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, CheckCircle, Zap, Shield, Clock, Users } from "lucide-react";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
+  description:
+    "Arctic Technologies provides dependable IT support, computer and mobile repairs, website design, and software solutions in Sri Lanka.",
+  keywords: [
+    "IT support Sri Lanka",
+    "computer repair Sri Lanka",
+    "mobile repair services",
+    "website design Sri Lanka",
+    "software solutions",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
+    description:
+      "SLA-backed IT support and digital solutions for businesses in Sri Lanka.",
+    url: "https://arctictechnologies.org.lk",
+    siteName: "Arctic Technologies",
+    type: "website",
+    images: [
+      {
+        url: "/Arctic_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Arctic Technologies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
+    description:
+      "SLA-backed IT support and digital solutions for businesses in Sri Lanka.",
+    images: ["/Arctic_logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 const whyChooseUs = [
   {
@@ -35,8 +79,43 @@ const benefits = [
 ];
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "Arctic Technologies",
+        url: "https://arctictechnologies.org.lk",
+        logo: "https://arctictechnologies.org.lk/Arctic_logo.png",
+        sameAs: [
+          "https://web.facebook.com/profile.php?id=61575511880304",
+          "https://www.linkedin.com/company/arctic-technologies-by-lucifer/",
+          "https://whatsapp.com/channel/0029VaqrpXCBlHphT762Pz3i",
+        ],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: "+94-76-472-1478",
+            contactType: "customer support",
+            availableLanguage: ["English"],
+          },
+        ],
+      },
+      {
+        "@type": "WebSite",
+        name: "Arctic Technologies",
+        url: "https://arctictechnologies.org.lk",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <Hero />
 

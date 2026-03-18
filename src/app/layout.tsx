@@ -11,16 +11,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arctictechnologies.org.lk"),
   title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
   description: "Arctic Technologies delivers dependable IT solutions including computer repairs, mobile phone services, Power App solutions, website design, and software solutions with SLA-backed support in Sri Lanka.",
   keywords: ["IT solutions", "computer repair", "mobile repair", "Power Apps", "website design", "software solutions", "Sri Lanka", "SLA support"],
   authors: [{ name: "Arctic Technologies" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
     description: "Professional IT services with SLA-backed support. Computer repairs, mobile services, Power Apps, and more.",
     url: "https://arctictechnologies.org.lk",
     siteName: "Arctic Technologies",
     type: "website",
+    images: [
+      {
+        url: "/Arctic_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Arctic Technologies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arctic Technologies | IT Solutions & SLA-Backed Support",
+    description: "Professional IT services with SLA-backed support. Computer repairs, mobile services, Power Apps, and more.",
+    images: ["/Arctic_logo.png"],
   },
 };
 

@@ -1,10 +1,47 @@
 import { services } from "@/data/services";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Our Services | Arctic Technologies",
     description: "Explore Arctic Technologies' comprehensive IT services including computer repairs, mobile services, Power Apps, website design, and software solutions.",
+    keywords: [
+        "IT services Sri Lanka",
+        "computer repair",
+        "mobile services",
+        "Power Apps solutions",
+        "website design",
+        "software development",
+    ],
+    alternates: {
+        canonical: "/services",
+    },
+    openGraph: {
+        title: "Our Services | Arctic Technologies",
+        description: "Discover end-to-end IT and digital services from Arctic Technologies.",
+        url: "https://arctictechnologies.org.lk/services",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Arctic Technologies Services",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Our Services | Arctic Technologies",
+        description: "Explore Arctic Technologies services for repairs, apps, websites, and business IT support.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function ServicesPage() {

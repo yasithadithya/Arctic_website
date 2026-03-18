@@ -1,9 +1,39 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowLeft, Clock, MessageCircle } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Coming Soon | Arctic Technologies",
     description: "Exciting new content coming soon from Arctic Technologies. Stay tuned!",
+    alternates: {
+        canonical: "/coming-soon",
+    },
+    openGraph: {
+        title: "Coming Soon | Arctic Technologies",
+        description: "New Arctic Technologies content is on the way. Follow us for updates.",
+        url: "https://arctictechnologies.org.lk/coming-soon",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Arctic Technologies Coming Soon",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Coming Soon | Arctic Technologies",
+        description: "Stay tuned for new Arctic Technologies resources and updates.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: false,
+        follow: true,
+        nocache: true,
+    },
 };
 
 export default function ComingSoonPage() {

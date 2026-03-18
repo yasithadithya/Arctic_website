@@ -1,9 +1,44 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, Target, Users, Lightbulb, Heart } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "About Us | Arctic Technologies",
     description: "Learn about Arctic Technologies - your trusted IT partner in Sri Lanka delivering SLA-backed computer services, repairs, and digital solutions.",
+    keywords: [
+        "about Arctic Technologies",
+        "IT company Sri Lanka",
+        "SLA-backed support",
+        "technology partner",
+    ],
+    alternates: {
+        canonical: "/about",
+    },
+    openGraph: {
+        title: "About Us | Arctic Technologies",
+        description: "Meet Arctic Technologies, an IT partner focused on reliable, SLA-backed service delivery in Sri Lanka.",
+        url: "https://arctictechnologies.org.lk/about",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "About Arctic Technologies",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Us | Arctic Technologies",
+        description: "Learn about our mission, values, and SLA-backed approach to IT services.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 const values = [

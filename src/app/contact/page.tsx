@@ -1,9 +1,44 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, MessageCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Contact Us | Arctic Technologies",
     description: "Get in touch with Arctic Technologies for IT solutions, computer repairs, and SLA-backed support services in Sri Lanka.",
+    keywords: [
+        "contact Arctic Technologies",
+        "IT support contact Sri Lanka",
+        "computer repair contact",
+        "technology consultation",
+    ],
+    alternates: {
+        canonical: "/contact",
+    },
+    openGraph: {
+        title: "Contact Us | Arctic Technologies",
+        description: "Contact Arctic Technologies for IT support, repairs, and digital solutions.",
+        url: "https://arctictechnologies.org.lk/contact",
+        siteName: "Arctic Technologies",
+        type: "website",
+        images: [
+            {
+                url: "/Arctic_logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Contact Arctic Technologies",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact Us | Arctic Technologies",
+        description: "Reach out to Arctic Technologies for fast, SLA-backed IT service support.",
+        images: ["/Arctic_logo.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 const contactInfo = [
